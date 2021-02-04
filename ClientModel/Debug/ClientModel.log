@@ -1,0 +1,3 @@
+﻿  client.cpp
+C:\Users\mohamed\source\repos\ClientServerModel\ClientModel\client.cpp(7,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  ClientModel.vcxproj -> C:\Users\mohamed\source\repos\ClientServerModel\Debug\ClientModel.exe
