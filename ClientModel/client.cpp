@@ -25,12 +25,11 @@ void main() {
 	}
 
 	// Fill in a hint structure
-	struct addrinfo hints;
+	struct sockaddr_in hints;
 	ZeroMemory(&hints, sizeof(hints));
-	hints.ai_family = AF_INET;
-	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_protocol = IPPROTO_TCP;
-	hints.ai_flags = AI_PASSIVE;
+	hints.sin_family = AF_INET;
+	hints.sin_port = htons(port);
+	inet_pton(AF_INET, ipAddress.c_str(), &hints.sin_addr);
 
 	// Connect to server
 	int connResult = connect(sock, (struct sockaddr*)&hints, sizeof(hints));
